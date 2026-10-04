@@ -1,0 +1,29 @@
+[
+  {
+    "route": "/",
+    "lcp": 2584,
+    "cls": 0,
+    "jsBytes": 510757,
+    "resourceBytes": 739273,
+    "htmlBytes": 35875,
+    "dialogs": 0
+  },
+  {
+    "route": "/projects/novelnest/",
+    "lcp": 2308,
+    "cls": 0.0004342345655161868,
+    "jsBytes": 502511,
+    "resourceBytes": 658129,
+    "htmlBytes": 58726,
+    "dialogs": 19
+  },
+  {
+    "route": "/projects/ecommerce-seller-dashboard/",
+    "lcp": 2252,
+    "cls": 0,
+    "jsBytes": 502511,
+    "resourceBytes": 647703,
+    "htmlBytes": 47574,
+    "dialogs": 15
+  }
+]

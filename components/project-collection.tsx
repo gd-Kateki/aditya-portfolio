@@ -1,0 +1,7 @@
+import Link from 'next/link';
+import { projects } from '@/data/projects';
+import { ProjectCard } from './project-card';
+export function ProjectCollection({ discipline }: { discipline: 'game' | 'ux' }) {
+const game=discipline==='game'; const items=projects.filter(p=>p.discipline===discipline&&p.slug!=='roblox-rng-case-study');
+return <main id="main-content" className="section-shell collection-page"><Link prefetch={false} className="text-link" href="/#work">← Selected work</Link><header className="collection-intro"><p className="eyebrow">{items.length} projects / {game?'Systems, spaces & stories':'Research, flows & interfaces'}</p><h1>{game?'Game Design':'UI/UX Design'}<span>.</span></h1><p>{game?'From an Egyptian underworld to unsettling dreamscapes. Explore the rules, environments, and stories behind my game projects.':'Interfaces designed around the people using them. Explore mobile experiences, product dashboards, and website redesigns.'}</p></header><nav className="collection-nav" aria-label="Explore portfolio"><Link prefetch={false} href="/game-design/" aria-current={game?'page':undefined}>Game Design</Link><Link prefetch={false} href="/uiux/" aria-current={!game?'page':undefined}>UI/UX Design</Link><Link prefetch={false} href="/writing/">Blogs & Case Studies</Link></nav><div className="portfolio-grid">{items.map(p=><ProjectCard key={p.slug} project={p}/>)}</div></main>;
+}
